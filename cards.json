@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "categories": {
+    "self": "Самопрезентація",
+    "nonexistent": "Неіснуючі теми",
+    "pseudoscience": "Псевдонаука",
+    "history": "Історичні",
+    "persuasion": "Переконання",
+    "story": "Історія з життя",
+    "explain": "Поясни просто"
+  },
+  "cards": [
+    { "id": "self-01", "category": "self", "title": "Представся за хвилину", "prompt": "Хто ти, чим займаєшся і чому з тобою цікаво працювати?", "duration": 60, "level": 1, "focus": ["voice", "gaze"] },
+    { "id": "self-02", "category": "self", "title": "Ліфтова презентація", "prompt": "Ти в ліфті з керівником компанії. У тебе 30 секунд, щоб він запам'ятав тебе.", "duration": 30, "level": 1, "focus": ["improv", "voice"] },
+    { "id": "self-03", "category": "self", "title": "Моя суперсила", "prompt": "Розкажи про навичку, якою пишаєшся, і наведи приклад, коли вона тебе врятувала.", "duration": 60, "level": 1, "focus": ["face", "gestures"] },
+    { "id": "self-04", "category": "self", "title": "Представ себе як продукт", "prompt": "Ти — новий продукт на ринку. Яку проблему ти вирішуєш і чому тебе варто «купити»?", "duration": 90, "level": 2, "focus": ["improv", "gestures"] },
+    { "id": "self-05", "category": "self", "title": "Перший день у команді", "prompt": "Представся новій команді так, щоб уже після зустрічі до тебе захотіли підійти.", "duration": 60, "level": 2, "focus": ["face", "gaze"] },
+
+    { "id": "nonexistent-01", "category": "nonexistent", "title": "Свято Дня зворотного понеділка", "prompt": "Розкажи історію цього національного свята і як його правильно святкувати.", "duration": 60, "level": 1, "focus": ["improv", "face"] },
+    { "id": "nonexistent-02", "category": "nonexistent", "title": "Професія: настроювач хмар", "prompt": "Опиши свою роботу: обов'язки, інструменти й найважчий випадок у кар'єрі.", "duration": 60, "level": 1, "focus": ["improv", "gestures"] },
+    { "id": "nonexistent-03", "category": "nonexistent", "title": "Олімпійський вид спорту: синхронне мовчання", "prompt": "Поясни правила, як судді ставлять оцінки і хто чемпіон світу.", "duration": 90, "level": 2, "focus": ["improv", "voice"] },
+    { "id": "nonexistent-04", "category": "nonexistent", "title": "Країна Пунктуанія", "prompt": "Проведи екскурсію країною, де розділові знаки — головна валюта.", "duration": 90, "level": 2, "focus": ["improv", "distance"] },
+    { "id": "nonexistent-05", "category": "nonexistent", "title": "Презентація фрукта гранолимон", "prompt": "Ти фермер, який вивів новий фрукт. Презентуй його закупівельникам мережі супермаркетів.", "duration": 90, "level": 3, "focus": ["improv", "gestures", "voice"] },
+
+    { "id": "pseudo-01", "category": "pseudoscience", "title": "Коти керують інтернетом", "prompt": "Доведи аудиторії, що саме коти стоять за всіма вірусними трендами.", "duration": 60, "level": 1, "focus": ["improv", "voice"] },
+    { "id": "pseudo-02", "category": "pseudoscience", "title": "Шкарпетки зникають у паралельний світ", "prompt": "Поясни «наукову» теорію, куди зникають шкарпетки з пральної машини.", "duration": 60, "level": 1, "focus": ["improv", "face"] },
+    { "id": "pseudo-03", "category": "pseudoscience", "title": "Понеділок — це хвороба", "prompt": "Ти лікар. Розкажи про симптоми, діагностику й лікування понеділкового синдрому.", "duration": 90, "level": 2, "focus": ["improv", "gestures"] },
+    { "id": "pseudo-04", "category": "pseudoscience", "title": "Кава як джерело часу", "prompt": "Доведи, що кожна чашка кави додає до доби 17 хвилин, і наведи «дослідження».", "duration": 90, "level": 2, "focus": ["improv", "voice"] },
+    { "id": "pseudo-05", "category": "pseudoscience", "title": "Рослини люблять критику", "prompt": "Виступи на конференції з відкриттям: кімнатні рослини ростуть швидше, якщо їх конструктивно критикувати.", "duration": 120, "level": 3, "focus": ["improv", "voice", "distance"] },
+
+    { "id": "history-01", "category": "history", "title": "Звернення Ярослава Мудрого", "prompt": "Ти — Ярослав Мудрий. Переконай киян, що бібліотека важливіша за нову фортецю.", "duration": 60, "level": 1, "focus": ["voice", "gestures"] },
+    { "id": "history-02", "category": "history", "title": "Винахідник колеса", "prompt": "Ти — винахідник колеса. Презентуй свій винахід скептично налаштованому племені.", "duration": 60, "level": 1, "focus": ["improv", "gestures"] },
+    { "id": "history-03", "category": "history", "title": "Гутенберг шукає інвестора", "prompt": "Ти — Гутенберг. Переконай інвестора вкласти гроші в друкарський верстат.", "duration": 90, "level": 2, "focus": ["improv", "voice"] },
+    { "id": "history-04", "category": "history", "title": "Репортаж з будівництва пірамід", "prompt": "Ти репортер у Стародавньому Єгипті. Веди прямий ефір з будівельного майданчика.", "duration": 90, "level": 2, "focus": ["distance", "voice"] },
+    { "id": "history-05", "category": "history", "title": "Захисти Колумба", "prompt": "Ти адвокат. Захисти Колумба перед судом, який звинувачує його в тому, що він «не туди приплив».", "duration": 120, "level": 3, "focus": ["improv", "voice", "face"] },
+
+    { "id": "persuasion-01", "category": "persuasion", "title": "Продай ручку", "prompt": "Продай мені цю ручку. Почни з питання, а не з характеристик.", "duration": 60, "level": 1, "focus": ["improv", "gaze"] },
+    { "id": "persuasion-02", "category": "persuasion", "title": "Чотириденний робочий тиждень", "prompt": "Переконай керівництво запровадити чотириденний робочий тиждень у твоїй команді.", "duration": 90, "level": 2, "focus": ["voice", "gestures"] },
+    { "id": "persuasion-03", "category": "persuasion", "title": "Нарада без телефонів", "prompt": "Переконай колег приходити на наради без телефонів. Очікуй, що вони будуть проти.", "duration": 60, "level": 1, "focus": ["face", "gaze"] },
+    { "id": "persuasion-04", "category": "persuasion", "title": "Вкладіть у мій проєкт", "prompt": "Ти на зустрічі з інвестором. Назви проблему, рішення і цифри.", "duration": 120, "level": 2, "focus": ["voice", "improv"] },
+    { "id": "persuasion-05", "category": "persuasion", "title": "Захисти непопулярну думку", "prompt": "Доведи, що ананас на піці — це геніально. Аудиторія налаштована вороже.", "duration": 90, "level": 3, "focus": ["improv", "face", "distance"] },
+
+    { "id": "story-01", "category": "story", "title": "Найсмішніша помилка", "prompt": "Розкажи про помилку, з якої ти тепер смієшся. Чого вона тебе навчила?", "duration": 60, "level": 1, "focus": ["face", "voice"] },
+    { "id": "story-02", "category": "story", "title": "Людина, яка вплинула на мене", "prompt": "Розкажи про людину, яка змінила твій погляд на щось важливе.", "duration": 90, "level": 1, "focus": ["voice", "gaze"] },
+    { "id": "story-03", "category": "story", "title": "Момент, коли все пішло не так", "prompt": "Опиши ситуацію на роботі, що вийшла з-під контролю, і як тобі вдалося з неї вибратися.", "duration": 90, "level": 2, "focus": ["improv", "gestures"] },
+    { "id": "story-04", "category": "story", "title": "Найкраще рішення року", "prompt": "Розкажи про рішення, яке далося важко, але виявилося правильним.", "duration": 90, "level": 2, "focus": ["voice", "face"] },
+    { "id": "story-05", "category": "story", "title": "Історія в трьох актах", "prompt": "Розкажи будь-яку подію зі свого життя: зав'язка, кульмінація, розв'язка. Тримай паузу перед кульмінацією.", "duration": 120, "level": 3, "focus": ["voice", "distance", "improv"] },
+
+    { "id": "explain-01", "category": "explain", "title": "Інтернет для бабусі", "prompt": "Поясни, як працює інтернет, людині, яка ніколи ним не користувалася.", "duration": 60, "level": 1, "focus": ["gestures", "improv"] },
+    { "id": "explain-02", "category": "explain", "title": "Інфляція на прикладі піци", "prompt": "Поясни, що таке інфляція, використовуючи лише приклади з піцою.", "duration": 60, "level": 1, "focus": ["improv", "voice"] },
+    { "id": "explain-03", "category": "explain", "title": "Твоя робота для дитини", "prompt": "Поясни свою роботу так, щоб зрозуміла шестирічна дитина.", "duration": 60, "level": 2, "focus": ["face", "gestures"] },
+    { "id": "explain-04", "category": "explain", "title": "Штучний інтелект за хвилину", "prompt": "Поясни, що таке штучний інтелект, без жодного технічного терміна.", "duration": 60, "level": 2, "focus": ["improv", "voice"] },
+    { "id": "explain-05", "category": "explain", "title": "Чому небо блакитне", "prompt": "Поясни аудиторії, чому небо блакитне, і зроби це захопливо: з паузою, запитанням і прикладом.", "duration": 90, "level": 3, "focus": ["voice", "distance", "gaze"] }
+  ]
+}

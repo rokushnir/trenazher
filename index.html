@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Тренажер невербальної комунікації</title>
+<meta name="description" content="Постав телефон перед собою й говори — тренажер аналізує міміку, погляд, жести, дистанцію, голос і мовлення та підказує, як виступати впевненіше. Відео не записується.">
+<meta name="theme-color" content="#3fd49f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ ГОЛОВНА ============ -->
+<main id="home" class="screen">
+  <header class="hud">
+    <div class="lvl-ring" id="lvlRing"><svg viewBox="0 0 50 50"><circle class="bg" cx="25" cy="25" r="21"/><circle class="fg" cx="25" cy="25" r="21" stroke-dasharray="132" stroke-dashoffset="132"/></svg><b id="lvlNum">1</b></div>
+    <div class="hud-main">
+      <div class="hud-title"><strong>Рівень <span id="lvlNum2">1</span></strong><span id="hudSub">0 балів</span></div>
+      <div class="xpbar"><i id="xpBar"></i></div>
+    </div>
+    <div class="hud-chip" title="Днів поспіль">🔥 <b id="streakDays">0</b></div>
+  </header>
+
+  <div class="wrap">
+    <h1>Тренажер невербальної комунікації</h1>
+    <p class="lead">Постав телефон перед собою й говори. Тренажер підкаже, як тримаєш позу, жестикулюєш, дивишся, звучиш і говориш, — і похвалить, коли все виходить.</p>
+
+    <section class="block">
+      <h2 class="h">Режим</h2>
+      <div class="modes" role="radiogroup">
+        <button class="mode" data-mode="free" role="radio"><span>🗣️</span><b>Вільна тема</b><small>Говори про що завгодно</small></button>
+        <button class="mode" data-mode="card" role="radio"><span>🎲</span><b>Картка-завдання</b><small>Тренуй імпровізацію</small></button>
+        <button class="mode" data-mode="script" role="radio"><span>📜</span><b>За текстом</b><small>Розмітка й репетиція</small></button>
+      </div>
+
+      <div class="mode-panel" data-for="card">
+        <div class="chips" id="catChips"></div>
+        <div class="task-card" id="taskCard"></div>
+        <button class="btn ghost" id="drawCard">🎲 Інша картка</button>
+        <div class="row"><span class="lbl">Час на підготовку</span><div class="chips small" id="prepChips"></div></div>
+      </div>
+
+      <div class="mode-panel" data-for="script">
+        <textarea id="scriptText" rows="6" placeholder="Встав текст своєї промови…"></textarea>
+        <button class="btn ghost" id="markBtn">✏️ Розмітити текст</button>
+        <div id="markup" class="markup" hidden></div>
+        <p class="muted small" id="markHelp" hidden>Натисни на слово — поставити чи зняти <b>наголос</b>. Натисни між словами — поставити чи зняти паузу ‖.</p>
+        <div class="row"><span class="lbl">Репетиція</span><div class="chips small" id="prompterChips"></div></div>
+      </div>
+
+      <div class="row" id="durRow"><span class="lbl">Тривалість</span><div class="chips small" id="durChips"></div></div>
+    </section>
+
+    <section class="block">
+      <h2 class="h">Налаштування</h2>
+      <div class="toggles" id="toggles"></div>
+    </section>
+
+    <section class="block privacy">
+      <h2 class="h">🔒 Приватність</h2>
+      <ul>
+        <li>Відео й звук <b>не записуються</b> і нікуди не надсилаються — аналіз відбувається на твоєму пристрої.</li>
+        <li>Розпізнавання слів робить сервіс браузера (Google у Chrome, Apple у Safari). Його можна вимкнути в налаштуваннях.</li>
+        <li>Зберігаються лише підсумкові бали — у цьому браузері.</li>
+      </ul>
+    </section>
+
+    <section class="block" id="historyBlock" hidden>
+      <h2 class="h">Твій прогрес</h2>
+      <div class="history" id="history"></div>
+      <div class="badges" id="badgeShelf"></div>
+      <button class="link" id="clearHist">Стерти історію</button>
+    </section>
+  </div>
+
+  <div class="start-bar"><button class="btn primary big" id="startBtn">Почати тренування</button></div>
+</main>
+
+<!-- ============ СЦЕНА ============ -->
+<section id="stage" class="screen" hidden>
+  <video id="video" playsinline muted autoplay></video>
+  <canvas id="overlay"></canvas>
+  <div class="fx" id="fx"></div>
+
+  <div class="stage-top">
+    <div class="prompter" id="prompter" hidden><div id="prompterText"></div></div>
+    <div class="coach" id="coach" hidden></div>
+  </div>
+
+  <div class="stage-bar">
+    <span class="pill" id="timer">0:00</span>
+    <span class="pill" id="pts">⭐ 0</span>
+    <button class="pill stop" id="stopBtn">■ Завершити</button>
+  </div>
+
+  <div class="stage-bottom">
+    <div class="live" id="live"></div>
+    <div class="inds" id="inds"></div>
+  </div>
+
+  <div class="overlay-card" id="ovl" hidden>
+    <div class="ovl-in">
+      <div id="ovlBody"></div>
+      <div class="ovl-actions" id="ovlActions"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ЗВІТ ============ -->
+<main id="report" class="screen" hidden>
+  <div class="wrap">
+    <div class="fx fixed" id="fxReport"></div>
+    <h1>Твій звіт</h1>
+    <div id="reportBody"></div>
+    <div class="rep-actions">
+      <button class="btn primary" id="againBtn">Ще раз</button>
+      <button class="btn ghost" id="newCardBtn" hidden>🎲 Нова картка</button>
+      <button class="btn ghost" id="homeBtn">На головну</button>
+    </div>
+  </div>
+</main>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
